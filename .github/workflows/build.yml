@@ -1,0 +1,19 @@
+name: Build with CMake and Make
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: CMake konfigurieren
+        run: cmake -S . -B build
+
+      - name: make ausführen
+        run: make -C build
