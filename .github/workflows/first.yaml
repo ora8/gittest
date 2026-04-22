@@ -1,0 +1,12 @@
+name: Mein erster Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Hallo sagen
+        run: echo "Hello World"
