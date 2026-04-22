@@ -1,12 +1,9 @@
-name: Mein erster Workflow
+name: Test Workflow
 
 on: [push]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Hallo sagen
-        run: echo "Hello World"
+      - run: echo "Hallo Welt"
